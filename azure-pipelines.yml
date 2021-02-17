@@ -11,8 +11,8 @@ steps:
 - task: Gradle@2
   displayName: 'gradlew build'
   inputs:
-    gradleWrapperFile: '$(Parameters.wrapperScript)'
-    tasks: '$(Parameters.tasks)'
+    gradleWrapperFile: '$(build.artifactstagingdirectory)gradle/wrapper'
+    tasks: '$(build.artifactstagingdirectory)gradle/wrapper'
     sonarQubeRunAnalysis: true
 
 - task: CopyFiles@2
