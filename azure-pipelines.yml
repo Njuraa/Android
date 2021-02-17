@@ -9,11 +9,13 @@ pool:
 
 steps:
 - task: Gradle@2
-  displayName: 'gradlew build'
   inputs:
-    gradleWrapperFile: '$(build.artifactstagingdirectory)gradle/wrapper'
-    tasks: '$(build.artifactstagingdirectory)gradle/wrapper'
-    sonarQubeRunAnalysis: true
+    gradleWrapperFile: 'gradlew'
+    tasks: 'build'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: false
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
