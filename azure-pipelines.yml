@@ -5,7 +5,7 @@ trigger:
 - master
 
 pool:
-  name: 'ubuntu-latest'
+  name: 'Nhlahla.intelliscient-CI'
 
 steps:
 - task: Gradle@2
