@@ -13,7 +13,7 @@ steps:
   inputs:
     gradleWrapperFile: '$(Parameters.wrapperScript)'
     tasks: '$(Parameters.tasks)'
-    sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: false
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
