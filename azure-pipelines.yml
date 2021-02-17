@@ -15,12 +15,6 @@ steps:
     tasks: '$(Parameters.tasks)'
     sonarQubeRunAnalysis: true
 
-- task: AndroidSigning@3
-  displayName: 'Signing and aligning APK file(s) **/*.apk'
-  inputs:
-    apksign: false
-    zipalign: false
-
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
